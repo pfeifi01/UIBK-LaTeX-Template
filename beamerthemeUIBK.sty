@@ -4,7 +4,7 @@
 %							%
 %	Author: Martin Pfeifhofer			%
 %							%
-%	Date: November 2016						%
+%	Date: 15th November 2016						%
 %							%
 %							%
 %-------------------------------------------------------%
@@ -85,6 +85,8 @@
   \begin{centering}
   
     \begin{beamercolorbox}[sep=8pt,center,#1]{title}
+      % CUSTOM FONT FOR TITLE
+      % \usebeamerfont{title}{\fontfamily{comfortaa}\selectfont\inserttitle}\newline 
       \usebeamerfont{title}\inserttitle\newline
       \usebeamerfont{subtitle}\insertsubtitle\par%
     \end{beamercolorbox}%
@@ -104,7 +106,7 @@
   \end{beamercolorbox}%
 }
 
-%--FRAME-TITLE-PAGE-----------------
+%--FRAMETITLE-----------------------
 \setbeamertemplate{frametitle}
 {
    \setbeamercolor{frametitle}{bg=UIBK BLUE} 
@@ -113,7 +115,7 @@
     \end{beamercolorbox}
 }
 %--TABLE-OF-CONTENTS----------------
-%set sections to bullets with numbers and bullets for subsections
+%set sections to bullets with numbers and simple bullets for subsections
 \setbeamertemplate{section in toc}
 {\leavevmode\leftskip=2ex%
   \llap{%
@@ -133,7 +135,7 @@
 {\leavevmode\leftskip=2em\bluebullet\hskip0.211em\inserttocsubsection\par}
 
 %--HEADER--------------------------
-%header contains actual section on the right, and subsection on the left
+%header contains actual section on the left, and subsection on the right
 \setbeamertemplate{headline}
 {%
 \leavevmode%
@@ -142,24 +144,24 @@
     \hspace*{0.01cm} \insertsection
     \end{beamercolorbox}%
     \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{header}%
-    \insertsubsection \hspace*{0.05cm}
+    \insertsubsection \hspace*{0.09cm}
     \end{beamercolorbox}%
   }
 }
 
 %--FOOTER-------------------------
-%footer displays author, theme and framenumber
+%footer displays author, theme, date and framenumber
 \setbeamertemplate{footline}
 {
   \leavevmode%
   \hbox{%
   \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footer}%
-    \usebeamerfont{author in head/foot}\insertshortauthor
+    \insertshortauthor
     \hspace*{0.1cm} (ICS @ UIBK)
   \end{beamercolorbox}%
   
   \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{footer}%
-    \usebeamerfont{title in head/foot}\insertshorttitle
+    \insertshorttitle
   \end{beamercolorbox}%
   
   \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{footer}%
